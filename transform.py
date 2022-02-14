@@ -17,7 +17,7 @@ class Segmentation:
         self.model = self._load_model()
         self.images = self._load_images()
 
-    def segment(self, plot=False, save_dir='./'):
+    def segment(self, plot=False, save_dir='./tmp'):
         if self.args.save_dir:
             save_dir = self.args.save_dir
 
