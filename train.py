@@ -95,13 +95,8 @@ class Trainer:
                           dim=2).to(self.device)
         self.criterion = torch.nn.CrossEntropyLoss()
         self.optimizer = torch.optim.AdamW(self.model.parameters(), lr=2e-6)
-        self.scheduler = torch.optim.lr_scheduler.CyclicLR(self.optimizer,
-                                                           base_lr=1e-7,
-                                                           max_lr=1e-2,
-                                                           step_size_up=1,
-                                                           mode="exp_range",
-                                                           gamma=0.45,
-                                                           cycle_momentum=False)
+        self.scheduler = torch.optim.lr_scheduler.CyclicLR(self.optimizer, base_lr=1e-7, max_lr=1e-2, step_size_up=1,
+                                                           mode="exp_range", gamma=0.45, cycle_momentum=False)
 
     def _load_checkpoint(self):
         checkpoint = torch.load(self.checkpoint_path)
