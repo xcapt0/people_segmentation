@@ -2,6 +2,8 @@
 
 A project to segment people on the image using the U-Net Deep Learning algorithm.
 
+![segmentation](https://user-images.githubusercontent.com/70326958/153869558-ecb34f05-ebcf-41b3-9783-d7d7b6dc3a91.jpg)
+
 ## 🛠️ Installation
 Install project with the following commands:
 
